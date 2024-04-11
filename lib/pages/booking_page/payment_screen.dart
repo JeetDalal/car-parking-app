@@ -71,8 +71,6 @@ class PaymentScreen extends StatelessWidget {
                 try {
                   await DbService().bookParkingSlot(
                       name, vehicleNumber, time, slot, payment);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Slot booked Successfully")));
                   Navigator.of(context).pop();
                   parkingController.bookParkingSlot(slot);
                 } catch (e) {
