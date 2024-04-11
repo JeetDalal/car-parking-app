@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>450443263694-e7es0madf919t0nrp8cjhs04p4og6f17.apps.googleusercontent.com</string>
+	<string>973553058687-ikkk1qm68g35ai3hntt3pcqfonr0da50.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.450443263694-e7es0madf919t0nrp8cjhs04p4og6f17</string>
+	<string>com.googleusercontent.apps.973553058687-ikkk1qm68g35ai3hntt3pcqfonr0da50</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCUJ5iYcNDQwHajl66D-bcWbseUyEzsLZ4</string>
+	<string>AIzaSyAo9FE8PqebxF0R3--7eiWXsXZLun3PUa4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>450443263694</string>
+	<string>973553058687</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.example.smartCarParking</string>
 	<key>PROJECT_ID</key>
-	<string>smart-car-parking-iot-c531f</string>
+	<string>smart-car-parking-dab06</string>
 	<key>STORAGE_BUCKET</key>
-	<string>smart-car-parking-iot-c531f.appspot.com</string>
+	<string>smart-car-parking-dab06.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:450443263694:ios:bc1a55ec8c3b97466dda9f</string>
+	<string>1:973553058687:ios:f62c69ee83aa803a7bd04a</string>
 </dict>
 </plist>

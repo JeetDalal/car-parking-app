@@ -139,14 +139,14 @@ class ParkingController extends GetxController {
       slot2.value.parkingHours = parkingTime.toString();
     }
 
-    slot2.value = CarModel(
-      booked: false,
-      isParked: false,
-      parkingHours: "",
-      name: "",
-      paymentDone: false,
-    );
-    print("Parking Time  ❤️ End ");
+    // slot2.value = CarModel(
+    //   booked: false,
+    //   isParked: false,
+    //   parkingHours: "",
+    //   name: "",
+    //   paymentDone: false,
+    // );
+    // print("Parking Time  ❤️ End ");
   }
 
   void slot3Controller() async {
@@ -326,7 +326,7 @@ class ParkingController extends GetxController {
             Lottie.asset(
               'assets/animation/done1.json',
             ),
-              Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: const [
                 Text(
@@ -344,17 +344,21 @@ class ParkingController extends GetxController {
               children: [
                 Icon(Icons.person),
                 SizedBox(width: 5),
-                Text("Name : ",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey
-                ),),
+                Text(
+                  "Name : ",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                ),
                 SizedBox(width: 20),
-                Text(name.text,style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black
-                ),),
+                Text(
+                  name.text,
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ],
             ),
             Row(
@@ -362,17 +366,21 @@ class ParkingController extends GetxController {
               children: [
                 Icon(Icons.car_rental),
                 SizedBox(width: 5),
-                Text("Vehical No  : ",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey
-                ),),
+                Text(
+                  "Vehical No  : ",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                ),
                 SizedBox(width: 20),
-                Text(vehicalNumber.text,style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black
-                ),),
+                Text(
+                  vehicalNumber.text,
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ],
             ),
             Row(
@@ -380,17 +388,21 @@ class ParkingController extends GetxController {
               children: [
                 Icon(Icons.watch_later_outlined),
                 SizedBox(width: 5),
-                Text("Parking time : ",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey
-                ),),
+                Text(
+                  "Parking time : ",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                ),
                 SizedBox(width: 20),
-                Text(parkingTimeInMin.value.toString(),style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black
-                ),),
+                Text(
+                  parkingTimeInMin.value.toString(),
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ],
             ),
             Row(
@@ -398,20 +410,23 @@ class ParkingController extends GetxController {
               children: [
                 Icon(Icons.solar_power_outlined),
                 SizedBox(width: 5),
-                Text("Parking Slot : ",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey
-                ),),
+                Text(
+                  "Parking Slot : ",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                ),
                 SizedBox(width: 20),
-                Text("A-${slotName.value.toString()}",style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black
-                ),),
+                Text(
+                  "A-${slotName.value.toString()}",
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ],
             ),
-       
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

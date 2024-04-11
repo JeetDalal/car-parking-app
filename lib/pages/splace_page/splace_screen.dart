@@ -27,7 +27,7 @@ class Splace_Screen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -40,7 +40,7 @@ class Splace_Screen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Flexible(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:smart_car_parking/controller/PakingController.dart';
+import 'package:smart_car_parking/pages/booking_page/payment_screen.dart';
 import '../../config/colors.dart';
 
 class BookingPage extends StatelessWidget {
@@ -45,7 +46,7 @@ class BookingPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-              const Row(
+              Row(
                 children: [
                   Text(
                     "Book Now 😊",
@@ -61,7 +62,7 @@ class BookingPage extends StatelessWidget {
                 color: blueColor,
               ),
               SizedBox(height: 30),
-              const Row(
+              Row(
                 children: [
                   Text(
                     "Enter your name ",
@@ -89,7 +90,7 @@ class BookingPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 30),
-              const Row(
+              Row(
                 children: [
                   Text(
                     "Enter Vehical Number ",
@@ -117,7 +118,7 @@ class BookingPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-              const Row(
+              Row(
                 children: [
                   Text(
                     "Choose Slot Time (in Minuits)",
@@ -125,8 +126,9 @@ class BookingPage extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 10),
-             Obx(() => Slider(
-              mouseCursor: MouseCursor.defer,
+              Obx(
+                () => Slider(
+                  mouseCursor: MouseCursor.defer,
                   thumbColor: blueColor,
                   activeColor: blueColor,
                   inactiveColor: lightBg,
@@ -134,11 +136,9 @@ class BookingPage extends StatelessWidget {
                   value: parkingController.parkingTimeInMin.value,
                   onChanged: (v) {
                     parkingController.parkingTimeInMin.value = v;
-                    if(v<=30)
-                    {
-                       parkingController.parkingAmount.value=30;
-                    }
-                    else{
+                    if (v <= 30) {
+                      parkingController.parkingAmount.value = 30;
+                    } else {
                       parkingController.parkingAmount.value = 60;
                     }
                     //  parkingController.parkingAmount.value = (parkingController.parkingTimeInMin.value * 10).round();
@@ -146,12 +146,13 @@ class BookingPage extends StatelessWidget {
                   divisions: 5,
                   min: 10,
                   max: 60,
-                ),),
-           const   Padding(
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsets.only(left: 10, right: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:  [
+                  children: const [
                     Text("10"),
                     Text("20"),
                     Text("30"),
@@ -212,14 +213,16 @@ class BookingPage extends StatelessWidget {
                             size: 30,
                             color: blueColor,
                           ),
-                         Obx(() => Text(
+                          Obx(
+                            () => Text(
                               "${parkingController.parkingAmount.value}",
                               style: TextStyle(
                                 fontSize: 40,
                                 fontWeight: FontWeight.w700,
                                 color: blueColor,
                               ),
-                            ),)
+                            ),
+                          )
                         ],
                       ),
                     ],
@@ -227,7 +230,7 @@ class BookingPage extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       // withoutFirebase.makePayment(slotId);
-                    //  withoutFirebase.slot1.value = true;
+                      //  withoutFirebase.slot1.value = true;
                     },
                     child: Container(
                       padding:
@@ -236,12 +239,26 @@ class BookingPage extends StatelessWidget {
                         color: blueColor,
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: Text(
-                        "PAY NOW",
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                          color: Colors.white,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PaymentScreen(
+                                  payment:
+                                      parkingController.parkingAmount.toInt(),
+                                  name: parkingController.name.text,
+                                  time: parkingController.parkingTimeInMin
+                                      .toInt(),
+                                  vehicleNumber:
+                                      parkingController.vehicalNumber.text,
+                                  slot: slotId)));
+                        },
+                        child: Text(
+                          "PAY NOW",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),

@@ -17,7 +17,6 @@ class HomePage extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-         
               const SizedBox(width: 20),
               const Text(
                 "SMART CAR PARKING",
@@ -49,7 +48,7 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
@@ -66,7 +65,7 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 60),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
@@ -204,7 +203,7 @@ class HomePage extends StatelessWidget {
                             )))
                   ],
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Column(
@@ -213,11 +212,11 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 40),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Made By : S SHERWIN ROY",
+                      "Made By : HARSH TULI",
                       style: TextStyle(
                         color: lightBg,
                       ),
